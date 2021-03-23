@@ -221,6 +221,8 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 # Don’t automatically rearrange Spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
+# Show all dotfiles
+defaults write com.apple.finder AppleShowAllFiles YES
 
 killall Finder
 

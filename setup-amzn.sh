@@ -96,7 +96,6 @@ CASKS=(
   # alfred <- look into
   # bartender <- look into
   # bettertouchtool <- look into
-  amazon-chime
   disk-inventory-x
   google-chrome
   intellij-idea

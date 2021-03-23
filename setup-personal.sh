@@ -38,8 +38,10 @@ brew install tree
 brew install wget
 brew install trash
 brew install mackup
-# brew install ballast
+brew install ballast
 brew install tmux
+brew tap jakehilborn/jakehilborn
+brew install displayplacer
 
 
 echo "Installing Fonts..."

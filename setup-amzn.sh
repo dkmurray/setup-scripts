@@ -41,6 +41,8 @@ brew install ballast
 brew install awscli
 brew install ninja-dev-sync
 brew install tmux
+brew tap jakehilborn/jakehilborn
+brew install displayplacer
 
 
 echo "Installing Fonts..."

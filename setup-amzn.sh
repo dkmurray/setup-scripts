@@ -1,11 +1,14 @@
 echo "Creating an SSH key for you..."
-ssh-keygen -t rsa
+ssh-keygen
 
 echo "Please add this public key to code.amazon \n"
 read -p "Press [Enter] key after this..."
 
-echo "Installing xcode-stuff"
+echo "Installing xcode-stuff..."
 xcode-select --install
+
+echo "Login via midway and kerberos"
+kinit && mwinit
 
 # Check for Homebrew,
 # Install if we don't have it
@@ -17,6 +20,13 @@ fi
 # Update homebrew recipes
 echo "Updating homebrew..."
 brew update
+
+echo "Tapping Amazon Keg..."
+brew tap amazon/homebrew-amazon ssh://git.amazon.com/pkg/homebrew-amazon
+brew analytics off
+
+echo "Installing ruby..."
+brew install ruby
 
 echo "Installing Git..."
 brew install git
@@ -70,15 +80,15 @@ git clone https://github.com/zsh-users/zsh-autosuggestions
 # cd .dotfiles
 # sh symdotfiles
 
-echo "Installing Google Backup and Sync..."
-brew install --cask --appdir="/Applications" google-backup-and-sync
+echo "Installing dropbox..."
+brew install --cask --appdir="/Applications" dropbox
 
-echo "Please login to and sync 'Google Backup and Sync' with your work account and then come back to this script."
+echo "Please login to and sync 'Dropbox' with your work account and then come back to this script."
 read -p "Press [Enter] key after this..."
 
 echo "Setting up Mackup..."
 echo "[storage]" > ~/.mackup.cfg
-echo "engine = google_drive" >> ~/.mackup.cfg
+echo "engine = dropbox" >> ~/.mackup.cfg
 
 read -p "Would you like to restore from mackup?" yn
     case $yn in
@@ -90,6 +100,36 @@ read -p "Would you like to restore from mackup?" yn
 echo "Setting ZSH as shell..."
 chsh -s /bin/zsh
 source ~/.zshrc
+
+echo "Installing toolbox..."
+/usr/bin/curl -fLSs -b ~/.midway/cookie 'https://buildertoolbox-bootstrap.s3-us-west-2.amazonaws.com/toolbox-install.sh' -o /tmp/toolbox-install.sh
+/bin/bash /tmp/toolbox-install.sh
+grep .toolbox ~/.zshrc || echo 'export PATH=$HOME/.toolbox/bin:$PATH' >> ~/.zshrc
+source ~/.zshrc
+
+echo "Setting up java path..."
+grep JAVA_HOME ~/.zshrc || echo "export JAVA_HOME=$(/usr/libexec/java_home)" >> ~/.zshrc
+source ~/.zshrc
+echo "Verify that this is thge JDK version installed from self-service"
+$JAVA_HOME/bin/java -version
+read -p "Press [Enter] key after verifying..."
+
+echo "Setting up python-build"
+brew install pyenv xz
+python-build 3.6.10
+python-build 3.7.7
+python-build 3.8.3
+
+echo "Installing toolbox utilities..."
+toolbox install ada batscli brazil-graph gordian-knot
+toolbox update
+echo "Please remember to install brazilcli later and set up workplace"
+
+# echo "Installing brazilcli..."
+# echo "(this will require a restart after this script finishes)"
+# toolbox install brazilcli
+# echo "Remember to run this after"
+# read -p "Press [Enter] key after this..."
 
 # Apps
 CASKS=(

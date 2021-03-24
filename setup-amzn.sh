@@ -65,6 +65,7 @@ brew cleanup
 #Install Zsh & Oh My Zsh
 echo "Installing Oh My ZSH..."
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# ToDo: add way to skip to here
 
 echo "Installing up powerlevel10k..."
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k

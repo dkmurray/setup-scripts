@@ -121,7 +121,7 @@ python-build 3.7.7 ~/.runtimes/Python37
 python-build 3.8.3 ~/.runtimes/Python38
 
 echo "Installing toolbox utilities..."
-toolbox install ada batscli brazil-graph gordian-knot
+toolbox install ada cr batscli brazil-graph gordian-knot
 toolbox update
 echo "Please remember to install brazilcli later and set up workplace"
 

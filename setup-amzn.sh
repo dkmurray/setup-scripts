@@ -22,7 +22,7 @@ echo "Updating homebrew..."
 brew update
 
 echo "Tapping Amazon Keg..."
-brew tap amazon/homebrew-amazon ssh://git.amazon.com/pkg/homebrew-amazon
+brew tap amazon/homebrew-amazon ssh://git.amazon.com/pkg/HomebrewAmazon
 brew analytics off
 
 echo "Installing ruby..."

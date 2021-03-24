@@ -123,7 +123,7 @@ python-build 3.8.3 ~/.runtimes/Python38
 echo "Installing toolbox utilities..."
 toolbox install ada cr batscli brazil-graph gordian-knot
 toolbox update
-echo "Please remember to install brazilcli later and set up workplace"
+echo "Please remember to install brazilcli and brazil CDN later and set up workplace"
 
 # echo "Installing brazilcli..."
 # echo "(this will require a restart after this script finishes)"

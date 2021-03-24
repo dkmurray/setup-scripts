@@ -116,9 +116,9 @@ read -p "Press [Enter] key after verifying..."
 
 echo "Setting up python-build"
 brew install pyenv xz
-python-build 3.6.10
-python-build 3.7.7
-python-build 3.8.3
+python-build 3.6.10 ~/.runtimes/Python36
+python-build 3.7.7 ~/.runtimes/Python37
+python-build 3.8.3 ~/.runtimes/Python38
 
 echo "Installing toolbox utilities..."
 toolbox install ada batscli brazil-graph gordian-knot

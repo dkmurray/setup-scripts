@@ -1,5 +1,5 @@
 echo "Installing x86 homebrew..."
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Update homebrew recipes
 echo "Updating homebrew..."

@@ -14,8 +14,8 @@ echo "Installing Rosetta2..."
 # Check for Homebrew,
 # Install if we don't have it
 if test ! $(which brew); then
-  echo "Installing ARM homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install)"
+    echo "Installing ARM homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # Update homebrew recipes

@@ -1,27 +1,31 @@
 # Apps
 CASKS=(
-  disk-inventory-x
-  google-chrome
-  iterm2
-  notion
-  rectangle
-  scroll-reverser
-  spotify
-  steermouse
-  sublime-text
-  suspicious-package
-  vlc
-  balance-lock
-  pritunl
-  visual-studio-code
+    alfred
+    balance-lock
+    dbeaver-community
+    deluge
+    disk-inventory-x
+    google-chrome # should already be installed
+    iterm2 # should already be installed
+    notion
+    pritunl
+    rectangle
+    scroll-reverser
+    spotify
+    steermouse
+    sublime-text
+    suspicious-package
+    visual-studio-code
+    vlc
+    zoom
 )
 
 # Install apps to /Applications
 echo "Installing apps with Cask..."
 brew tap homebrew/cask
 for i in "${CASKS[@]}"; do
-  echo "Installing ".$i
-  brew install --cask $i
+    echo "Installing ".$i
+    brew install --cask $i
 done
 
 brew cleanup

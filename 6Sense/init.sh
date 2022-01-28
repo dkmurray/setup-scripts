@@ -35,22 +35,27 @@ echo "Installing brew git utilities..."
 brew install git-extras
 
 echo "Installing other brew stuff..."
-brew install tree
-brew install wget
-brew install trash
-brew install mackup
-brew install podman
-brew install bat
-brew install tmux
 brew tap jakehilborn/jakehilborn
-brew install displayplacer
+PROGS=(
+    bat
+    displayplacer
+    gh
+    mackup
+    podman
+    tmux
+    trash
+    tree
+    wget
+)
+
+for i in "${PROGS[@]}"; do
+  echo "Installing " $i "..."
+  brew install $i
+done
 
 echo "Installing Fonts..."
 brew tap epk/epk
 brew install font-sf-mono-nerd-font
-
-echo "Cleaning up brew..."
-brew cleanup
 
 echo "Please install MesloLGS NF manually from:"
 echo "https://github.com/romkatv/powerlevel10k/blob/master/font.md"
@@ -86,5 +91,8 @@ read -p "Would you like to restore from mackup?" yn
         [Nn]* ) echo "Please add arch flags from 'https://6sense.atlassian.net/wiki/spaces/ENG/pages/2424504461/Guide+for+M1+based+Big+Sur+MacBook+devices' to your .zshrc if they are not already there"; break;;
         * ) echo "Please answer yes or no.";;
     esac
+
+echo "Cleaning up brew..."
+brew cleanup
 
 echo "Please restart ZSH with 'exec zsh' and run './apps.sh'"

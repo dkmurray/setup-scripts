@@ -22,6 +22,11 @@ brew install maven
 echo "Please set up mavenrc in a new tab (https://6sense.atlassian.net/wiki/spaces/ENG/pages/2424504461/Guide+for+M1+based+Big+Sur+MacBook+devices)"
 read -p "Press [Enter] key after this is complete..."
 
+echo "Installing Rust..."
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+ln -s ~/.cargo/bin/rustc /usr/local/bin/rustc
+ln -s ~/.cargo/bin/cargo /usr/local/bin/cargo
+
 echo "Creating ~/bin..."
 sudo mkdir ~/bin
 

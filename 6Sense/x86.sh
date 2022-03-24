@@ -7,9 +7,9 @@ brew update
 
 echo "Installing & linking x86 Python3.7..."
 brew install python@3.7
-ln -s /usr/local/Homebrew/opt/python@3.7/bin/python3.7 /usr/local/bin/python3.7
-ln -s /usr/local/Homebrew/opt/python@3.7/bin/pip3.7 /usr/local/bin/pip3.7
-ln -s /usr/local/Homebrew/opt/python@3.7/bin/python3.7-config /usr/local/bin/python3.7-config
+ln -s /usr/local/opt/python@3.7/bin/python3.7 /usr/local/bin/python3.7
+ln -s /usr/local/opt/python@3.7/bin/pip3.7 /usr/local/bin/pip3.7
+ln -s /usr/local/opt/python@3.7/bin/python3.7-config /usr/local/bin/python3.7-config
 
 echo "Please download and install the latest java 8 and java 11 JDKs from Adoptium (https://6sense.atlassian.net/wiki/spaces/ENG/pages/2424504461/Guide+for+M1+based+Big+Sur+MacBook+devices)"
 read -p "Press [Enter] key after this..."

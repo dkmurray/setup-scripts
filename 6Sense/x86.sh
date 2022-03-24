@@ -39,6 +39,8 @@ PROGS=(
     bat
     coreutils
     gh
+    git
+    git-extras
     gpg
     graphviz
     sqlite3

@@ -57,9 +57,11 @@ echo "Installing Fonts..."
 brew tap epk/epk
 brew install font-sf-mono-nerd-font
 
-echo "Please install MesloLGS NF manually from:"
-echo "https://github.com/romkatv/powerlevel10k/blob/master/font.md"
-read -p "Press [Enter] key after this is complete..."
+echo "Installing MesloLGS NF..."
+wget -P ~/Library/Fonts https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+wget -P ~/Library/Fonts https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf
+wget -P ~/Library/Fonts https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
+wget -P ~/Library/Fonts https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
 
 #Install Zsh & Oh My Zsh
 echo "Installing Oh My ZSH..."

@@ -34,6 +34,7 @@ ln -s /usr/local/Homebrew/opt/rsync/bin/rsync /usr/local/bin/rsync
 
 echo "Installing various other tools & dependencies..."
 PROGS=(
+    bat
     coreutils
     gh
     gpg

@@ -3,7 +3,7 @@ echo "Setting some Mac settings..."
 defaults write -g InitialKeyRepeat -int 25
 defaults write -g KeyRepeat -int 2
 
-#"Disabline the 'Are you sure you want to open this application?' dialog"
+#"Disable the 'Are you sure you want to open this application?' dialog"
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 #"Expanding the save panel by default"

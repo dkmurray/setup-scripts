@@ -7,6 +7,9 @@ brew update
 
 echo "Installing & linking x86 Python3.7..."
 brew install python@3.7
+echo "Please verify that python3.7 was installed to /usr/local/opt, and not /usr/local/Homebrew/opt. 
+If it is the latter, kill this script with ctrl+C and change the symlinks to respect the correct install location"
+read -p "Press [Enter] key after this is complete..."
 ln -s /usr/local/opt/python@3.7/bin/python3.7 /usr/local/bin/python3.7
 ln -s /usr/local/opt/python@3.7/bin/pip3.7 /usr/local/bin/pip3.7
 ln -s /usr/local/opt/python@3.7/bin/python3.7-config /usr/local/bin/python3.7-config

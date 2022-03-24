@@ -5,9 +5,9 @@ CASKS=(
     dbeaver-community
     deluge
     disk-inventory-x
-    google-chrome # should already be installed
+    # google-chrome # should already be installed
     insomnia
-    iterm2 # should already be installed
+    # iterm2 # should already be installed
     notion
     pritunl
     rectangle

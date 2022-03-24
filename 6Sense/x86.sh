@@ -32,7 +32,7 @@ chmod u+x ~/bin/bazel
 
 echo "Installing & linking x86 rsync..."
 brew install rsync
-ln -s /usr/local/Homebrew/opt/rsync/bin/rsync /usr/local/bin/rsync
+ln -s /usr/local/opt/rsync/bin/rsync /usr/local/bin/rsync
 
 echo "Installing various other tools & dependencies..."
 PROGS=(
@@ -57,7 +57,11 @@ done
 echo "Installing & linking MySQL..."
 brew install mysql@5.7
 brew install mysql-client@5.7
-ln -s /usr/local/Homebrew/opt/mysql@5.7/bin/mysql_config /usr/local/bin/mysql_config
+ln -s /usr/local/opt/mysql@5.7/bin/mysql_config /usr/local/bin/mysql_config
+
+echo "Installing PostgreSQL..."
+brew install postgresql
+ln -s /usr/local/opt/postgresql/bin/pg_config /usr/local/bin/pg_config
 
 echo "Setting up Redis..."
 brew install redis

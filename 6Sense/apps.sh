@@ -1,19 +1,19 @@
 # Apps
 CASKS=(
-    alfred
-    balance-lock
+    caffeine
     dbeaver-community
     deluge
     disk-inventory-x
     # google-chrome # should already be installed
     insomnia
     # iterm2 # should already be installed
+    logitune
     notion
     pritunl
+    raycast
     rectangle
     scroll-reverser
     spotify
-    steermouse
     sublime-text
     suspicious-package
     visual-studio-code

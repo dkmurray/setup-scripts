@@ -1,28 +1,29 @@
 # Apps
 CASKS=(
-    dbeaver-community
-    deluge
     disk-inventory-x
     # google-chrome # should already be installed
-    insomnia
     # iterm2 # should already be installed
     logitune
     notion
-    pritunl
     raycast
-    rectangle
+    #rectangle
     scroll-reverser
     spotify
     sublime-text
     suspicious-package
-    visual-studio-code
+    #visual-studio-code
     vlc
     zoom
+    orcaslicer
+    the-unarchiver
+    logitech-g-hub
+    openscad@snapshot
+    znotch
 )
 
 # Install apps to /Applications
 echo "Installing apps with Cask..."
-brew tap homebrew/cask
+brew tap zkondor/dist
 for i in "${CASKS[@]}"; do
     echo "Installing ".$i
     brew install --cask $i

@@ -34,14 +34,10 @@ echo "Installing brew git utilities..."
 brew install git-extras
 
 echo "Installing other brew stuff..."
-brew tap jakehilborn/jakehilborn
 PROGS=(
     bat
-    displayplacer
     gh
-    mackup
     podman
-    tmux
     trash
     tree
     wget
@@ -64,11 +60,11 @@ wget -P ~/Library/Fonts https://github.com/romkatv/powerlevel10k-media/raw/maste
 
 #Install Zsh & Oh My Zsh
 echo "Installing Oh My ZSH..."
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "Installing up powerlevel10k..."
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-echo "Run 'p10k configure' if you're not restoring from Mackup later"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+echo "Change theme to powerlevel10k/powerlevel10k and run 'exec zsh' after this script"
 echo ""
 
 echo "Setting up Zsh plugins..."
